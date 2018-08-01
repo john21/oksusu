@@ -4,8 +4,8 @@
 - 참고 : https://blog.naver.com/cybersol/221205923312
 - KODI용 압축파일 : https://soju6jan.github.io
 - 설치 후 실행이 안될 때는 데이터 폴더 삭제후 재실행 (예: 윈도우기준)
-> - KODI : C:\Users\soju6jan\AppData\Roaming\Kodi\userdata\addon_data\plugin.video.oksusu
-> - PLEX : C:\Users\soju6jan\AppData\Local\Plex Media Server\Plug-in Support\Data\com.plexapp.plugins.oksusu
+ > + KODI : C:\Users\soju6jan\AppData\Roaming\Kodi\userdata\addon_data\plugin.video.oksusu
+ > + PLEX : C:\Users\soju6jan\AppData\Local\Plex Media Server\Plug-in Support\Data\com.plexapp.plugins.oksusu
 
 ----
 #### 폴더구조
