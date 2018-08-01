@@ -1,6 +1,6 @@
 # oksusu
 
-옥수수 티빙 KODI / PLEX 플러그인
+옥수수 KODI / PLEX 플러그인
 
 https://blog.naver.com/cybersol/221205923312
 
