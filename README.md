@@ -2,7 +2,10 @@
 
 옥수수 티빙 KODI / PLEX 플러그인
 
-블로그에서 먼저 배포 후 0.먼저 배포. 설명 참조
+https://blog.naver.com/cybersol/221205923312
+
+KODI용 압축파일은 
+https://github.com/soju6jan/soju6jan.github.io
 
 ----
 #### 폴더구조
