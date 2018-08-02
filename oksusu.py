@@ -15,14 +15,14 @@ try:
 	import xbmc, xbmcaddon
 	profile = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('profile'))
 	LOCAL_PROGRAM_LIST = xbmc.translatePath(os.path.join( profile, 'programlist.txt'))
-	LOGINDATA = xbmc.translatePath(os.path.join( profile, 'login.dat'))
+	LOGINDATA = xbmc.translatePath(os.path.join( profile, 'login2.dat'))
 except:
 	pass
 
 try:
 	if LOGINDATA is '':
 		LOCAL_PROGRAM_LIST = os.path.join( os.getcwd(), 'programlist.txt')
-		LOGINDATA = os.path.join( os.getcwd(), 'login.dat')
+		LOGINDATA = os.path.join( os.getcwd(), 'login2.dat')
 except:
 	pass
 
