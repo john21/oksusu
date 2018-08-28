@@ -168,7 +168,8 @@ def GetList( type, param, page ):
 			url = 'https://www.oksusu.com/api/live/organization/list?genreCode=99&orgaPropCode=ALL'
 			request = urllib2.Request(url)
 			request.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36')
-			response = urllib2.urlopen(request)
+			#response = urllib2.urlopen(request)
+			response = urllib2.urlopen(request, context=ssl.SSLContext(ssl.PROTOCOL_TLSv1))
 			data = json.load(response, encoding="utf-8")
 			#LOG(data)
 			for item in data["channels"]:
