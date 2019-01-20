@@ -1,7 +1,7 @@
 [
 	{
 		"id": "id",
-		"label": "oksusu ID - v0.2.0",
+		"label": "oksusu ID - v0.3.0",
 		"type": "text",
 		"default": ""
 	},

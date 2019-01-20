@@ -5,6 +5,7 @@ import json
 import re
 import pickle
 import ssl
+import time
 from io import open
 
 ######################################## 
@@ -48,7 +49,7 @@ def LOG(str):
 
 def GetSetting(type):
 	try:
-		import xbmc, xbmcaddon
+		import xbmcaddon
 		ret = xbmcaddon.Addon().getSetting(type)
 		return ret
 	except:
@@ -63,7 +64,7 @@ def GetSetting(type):
 ######################################## 
 # 공통
 ######################################## 
-VERSION = '0.2.0'
+VERSION = '0.3.0'
 QUALITYS = ['FHD', 'HD', 'SD']
 MENU_LIST = [
 	'ALL:오리지널:9000002014:P',
@@ -96,7 +97,7 @@ def DoStartLoginCheck():
 		message += '아이디/암호 정보가 없습니다.'
 	else:
 		status = GetLoginStatus()
-		if status == 'NOT_LOGIN_FILE' or status == 'LOGIN_FAIL' or use_local_logindata == False or use_local_logindata == 'false':
+		if status == 'NOT_LOGIN_FILE' or status == 'LOGIN_FAIL' or use_local_logindata == False or use_local_logindata == 'false' or status == 'NEED_RELOGIN':
 			isLogin = DoLogin(id, pw)
 			status = GetLoginStatus()
 			if status == 'SUCCESS': 
@@ -111,6 +112,10 @@ def DoStartLoginCheck():
 
 def GetLoginStatus():
 	if os.path.isfile(LOGINDATA):
+		create_time = os.path.getctime(LOGINDATA)
+		diff = time.gmtime(time.time() - create_time)
+		if diff.tm_mday > 1:
+			return 'NEED_RELOGIN'
 		login_data = GetLoginData()
 		if 't' in login_data: return 'SUCCESS'
 		else: return 'LOGIN_FAIL'
