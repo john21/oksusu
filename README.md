@@ -31,6 +31,15 @@
 
 ----
 #### ChangeLog
+##### 0.3.1 (2019.01.24)
+- 팬케익님 제보 Synology Plex에서 안되는 문제 수정
+  response = urllib2.urlopen(request, context=ssl.SSLContext(ssl.PROTOCOL_TLSv1))
+  ==>
+  try:
+    response = urllib2.urlopen(request, context=ssl.SSLContext(ssl.PROTOCOL_TLSv1))
+  except:
+    response = urllib2.urlopen(request, context=ssl.SSLContext(ssl.PROTOCOL_TLSv1_2))
+  
 ##### 0.2.1 (20180828)
 - 일부 OS에서 실행 안되는 문제 수정
   (GetList SSL bug fix)
